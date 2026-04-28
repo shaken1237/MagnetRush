@@ -1,4 +1,4 @@
-using UnityEngine;
+﻿using UnityEngine;
 
 [CreateAssetMenu(fileName = "EnemyBossSettings", menuName = "MagnetRush/EnemyBossSettings")]
 public class EnemyBossSettings : ScriptableObject

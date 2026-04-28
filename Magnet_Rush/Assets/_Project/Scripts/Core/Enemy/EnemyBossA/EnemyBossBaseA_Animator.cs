@@ -1,19 +1,19 @@
-using UnityEngine;
+ï»¿using UnityEngine;
 using UnityEngine.InputSystem;
 
 public class EnemyBossBaseA_Animator : MonoBehaviour
 {
     [Header("References")]
-    [Tooltip("‹ì“®‘ÎÛ‚Ì Animatori–¢İ’è‚È‚çqƒIƒuƒWƒFƒNƒg‚©‚çæ“¾j")]
+    [Tooltip("é§†å‹•å¯¾è±¡ã® Animatorï¼ˆæœªè¨­å®šãªã‚‰å­ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã‹ã‚‰å–å¾—ï¼‰")]
     [SerializeField] private Animator m_animator;
 
-    [Tooltip("HitboxB–¢İ’è‚È‚çƒ‹[ƒg‚Ìq‚©‚çæ“¾")]
+    [Tooltip("Hitboxã€‚æœªè¨­å®šãªã‚‰ãƒ«ãƒ¼ãƒˆã®å­ã‹ã‚‰å–å¾—")]
     [SerializeField] private Hitbox m_hitbox;
 
     [Header("Debug")]
     [SerializeField] private bool m_enableDebugInput = true;
 
-    [Header("Animator Parameter Names (Inspector ’Pˆê‰ÓŠŠÇ—)")]
+    [Header("Animator Parameter Names (Inspector å˜ä¸€ç®‡æ‰€ç®¡ç†)")]
     [SerializeField] private string m_attackName = "Attack";
     [SerializeField] private string m_attackFinishedName = "AttackFinished";
     [SerializeField] private string m_beInterruptedName = "BeInterrupted";
@@ -45,7 +45,7 @@ public class EnemyBossBaseA_Animator : MonoBehaviour
 
         if (m_animator == null)
         {
-            ChannelLogger.LogGuardReturn("Enemy", "EnemyBossBaseA_Animator.m_animator ‚ª–¢ƒAƒTƒCƒ“‚Å‚·");
+            ChannelLogger.LogGuardReturn("Enemy", "EnemyBossBaseA_Animator.m_animator ãŒæœªã‚¢ã‚µã‚¤ãƒ³ã§ã™");
             enabled = false;
         }
     }
@@ -127,7 +127,7 @@ public class EnemyBossBaseA_Animator : MonoBehaviour
     }
 
     /// <summary>
-    /// Hitbox ‚©‚ç‚ÌƒqƒbƒgƒCƒxƒ“ƒg‚ğˆ—‚·‚éB”í’e‚µ‚½‚ç‘¦’†’fƒgƒŠƒK[‚ğ‘—‚éB
+    /// Hitbox ã‹ã‚‰ã®ãƒ’ãƒƒãƒˆã‚¤ãƒ™ãƒ³ãƒˆã‚’å‡¦ç†ã™ã‚‹ã€‚è¢«å¼¾ã—ãŸã‚‰å³ä¸­æ–­ãƒˆãƒªã‚¬ãƒ¼ã‚’é€ã‚‹ã€‚
     /// </summary>
     private void HandleHit(HitData hit)
     {
@@ -135,7 +135,7 @@ public class EnemyBossBaseA_Animator : MonoBehaviour
     }
 
     /// <summary>
-    /// Animator Controller ‚É•K—v‚Èƒpƒ‰ƒ[ƒ^‚ª’è‹`‚³‚ê‚Ä‚¢‚é‚©‚ğƒ`ƒFƒbƒN‚µA‘«‚è‚È‚¢‚à‚Ì‚ª‚ ‚ê‚ÎƒGƒ‰[‚ğo‚·B
+    /// Animator Controller ã«å¿…è¦ãªãƒ‘ãƒ©ãƒ¡ãƒ¼ã‚¿ãŒå®šç¾©ã•ã‚Œã¦ã„ã‚‹ã‹ã‚’ãƒã‚§ãƒƒã‚¯ã—ã€è¶³ã‚Šãªã„ã‚‚ã®ãŒã‚ã‚Œã°ã‚¨ãƒ©ãƒ¼ã‚’å‡ºã™ã€‚
     /// </summary>
     private void ValidateAnimatorParameters()
     {
@@ -159,7 +159,7 @@ public class EnemyBossBaseA_Animator : MonoBehaviour
         {
             if (!existing.Contains(name))
                 Debug.LogError(
-                    $"[EnemyBossBaseA_Animator] Animator ƒpƒ‰ƒ[ƒ^ '{name}' ({purpose}) ‚ª Controller ‚É’è‹`‚³‚ê‚Ä‚¢‚Ü‚¹‚ñB",
+                    $"[EnemyBossBaseA_Animator] Animator ãƒ‘ãƒ©ãƒ¡ãƒ¼ã‚¿ '{name}' ({purpose}) ãŒ Controller ã«å®šç¾©ã•ã‚Œã¦ã„ã¾ã›ã‚“ã€‚",
                     this);
         }
     }
